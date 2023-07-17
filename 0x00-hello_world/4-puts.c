@@ -1,5 +1,4 @@
 #include <Stdio.h>
-
 /**
 * main - A program that prints a line with put function
 * Return: alway 0 (success)
