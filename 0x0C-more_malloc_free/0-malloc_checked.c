@@ -1,23 +1,30 @@
 
-
 #include "main.h"
-
+#include <stdlib.h>
 
 /**
-* malloc_checked - cause normal process termination with a status value of 98
+* create_array - creates an array of chars,
+* and initializes it with a specific char.
+* @size: the size of the array
+* @c: initial value
 *
-* @b: allocated memory
-*
-* Return: a pointer to the allocated memory
+* Return: a pointer to the array, or NULL if it fails
 */
-void *malloc_checked(unsigned int b)
+char *create_array(unsigned int size, char c)
 {
-   void *i;
+  char *array;
+  unsigned int i;
 
+  if (size == 0)
+     return (NULL);
 
-   i = malloc(b);
-   if (i == NULL)
-       exit(98);
-   return (i);
+  array = (char *)malloc(sizeof(char) * size);
+  if (array == NULL)
+     return (NULL);
+
+  for (i = 0; i < size; i++)
+     array[i] = c;
+
+  return (array);
 }
 
