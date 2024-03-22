@@ -1,10 +1,13 @@
 #include "lists.h"
 
 /**
- * free_dlistint - frees a dlistint_t list
+ * struct dlistint_s - doubly linked list
+ * @n: integer
+ * @prev: points to the previous node
+ * @next: points to the next node
  *
- * @head: head of the list
- * Return: no return
+ * Description: doubly linked list node structure
+ * 
  */
 void free_dlistint(dlistint_t *head)
 {
