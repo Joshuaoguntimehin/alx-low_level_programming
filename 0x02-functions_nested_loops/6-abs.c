@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * _abs - Computers the absolute
  * @c: The number computed
@@ -16,4 +17,4 @@ int _abs(int c)
 		return (abs_val);
 	}
 	return (c);
-{
+}
